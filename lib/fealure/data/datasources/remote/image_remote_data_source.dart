@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 
 abstract class ImageRemoteDataSourse{
   Future<ImageModel?> uploadRemoteImage(File image);
+  Future<void> deleteRemoteImage(ImageModel image);
 }
 
 class ImageRemoteDataSourseImpl implements ImageRemoteDataSourse{
@@ -42,6 +43,26 @@ class ImageRemoteDataSourseImpl implements ImageRemoteDataSourse{
     }else{
       return null;
     }
+  }
+
+  @override
+  Future<void> deleteRemoteImage(ImageModel image) async{
+
+    Map data = {
+      "data": true,
+      "success": true,
+      "statuc": 200
+    };
+
+    var request = await http.delete(
+      Uri.parse('"https://api.imgur.com/3/image/${image.deletehash}"'),
+      body: {
+        "data": true,
+        "success": true,
+        "statuc": 200
+      },
+    );
+
   }
   
 }

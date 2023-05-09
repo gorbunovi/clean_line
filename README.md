@@ -2,7 +2,7 @@
 
 Тестовое задание для Класик
 
-репозиторий -
+репозиторий - https://github.com/gorbunovi/clean_line
 
 flutter pub run build_runner build --delete-conflicting-outputs
 

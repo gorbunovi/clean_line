@@ -4,7 +4,6 @@ import 'package:clean_line/fealure/data/repositories/imge_repository_impl.dart';
 import 'package:clean_line/fealure/domain/repositories/image_repository.dart';
 import 'package:clean_line/fealure/domain/usecases/upload_image.dart';
 import 'package:get_it/get_it.dart';
-import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/core.dart';
 import 'fealure/domain/usecases/get_imeges_list.dart';
@@ -52,6 +51,5 @@ Future<void> init() async {
   //External
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => sharedPreferences);
-  sl.registerLazySingleton(() => http.Client());
   sl.registerLazySingleton(() => InternetConnectionChecker());
 }

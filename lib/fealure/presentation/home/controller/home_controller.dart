@@ -7,7 +7,9 @@ import 'package:get/get.dart';
 import 'index.dart';
 
 class HomeController extends Cubit<HomeState> {
-  HomeController({required this.getImagesList}) : super(const Initial());
+  HomeController({
+    required this.getImagesList,
+  }) : super(const Initial());
 
   GetImagesList getImagesList;
   late List<ImageModel> _imagesList;

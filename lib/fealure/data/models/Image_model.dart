@@ -34,4 +34,14 @@ class ImageModel extends ImageEntity{
       };
     }
 
+    @override
+  String toString() {
+    return 'ImageModel{'
+      'id: $id, '
+      'title: $title, '
+      'description: $description, '
+      'deletehash: $deletehash, '
+      'urlImage: $urlImage,'
+        '}';
+  }
 }

@@ -31,5 +31,4 @@ class ImagesLocalDataSourceImpl implements ImageLocalDataSourse{
       json.encode(image.toJson())).toList();
     sharedPreferences.setStringList(LocalDataSource.IMAGES_LIST, jsonImagesList);
   }
-
 }

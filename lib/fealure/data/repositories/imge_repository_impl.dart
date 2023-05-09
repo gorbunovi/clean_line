@@ -42,6 +42,4 @@ class ImageRepositoryImpl implements ImageRepository{
       return Left(CacheFailure(''));
     }
   }
-
-
 }

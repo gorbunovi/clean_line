@@ -26,14 +26,14 @@ class PhotoWidget extends StatelessWidget {
         child: Column(
            mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Container(
-            height: 250,
-            width: 250,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: NetworkImage(image.urlImage),
-                    fit: BoxFit.fill)),
-          ),
+            Container(
+              height: 250,
+              width: 250,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(image.urlImage),
+                      fit: BoxFit.fill)),
+            ),
           ],
         ),
       ),
